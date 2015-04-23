@@ -32,12 +32,23 @@
 --
 
 ## Type Inference
-- The [file command](http://en.wikipedia.org/wiki/File_(command)) is "type inference"
+- The [file command](http://en.wikipedia.org/wiki/File_(command)) is crude "type inference"
 - attach type metadata when the conformance test validates type inference
 - log warnings when conformance test contradicts type inference
 - The "expected type" of an unknown file might be hinted by extension
 - Infer all file types on an ongoing basis, and log type events
 - Inferred file types can be marked as advisory when desired
+
+--
+
+## Typed Pipelines
+- Programs which are run as pipes need not be ```Any => Any```
+- Instead they can be ```A ?=> B``` where A and B are exposed in metadata
+- An ```A*``` file into a ```A ?=> B``` pipe can only produce ```B*```
+- If output to file, file is typed as ```B*```
+- If output to console, output formatter derived from type B ("implicit Show[B]")
+- Type-aware tab-completion so where applicable B's members are shown
+- All these properties maintainable across arbitrary pipeline depth
 
 --
 
