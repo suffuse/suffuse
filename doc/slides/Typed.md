@@ -47,7 +47,8 @@
 - An ```A*``` file into a ```A ?=> B``` pipe can only produce ```B*```
 - If output to file, file is typed as ```B*```
 - If output to console, output formatter derived from type B ("implicit Show[B]")
-- Type-aware tab-completion so where applicable B's members are shown
+- Formatter arbitrary - maybe type A1 is ```less``` but A2 opens a browser
+- Type-aware tab-completion so where applicable, B's members are shown
 - All these properties maintainable across arbitrary pipeline depth
 
 --
