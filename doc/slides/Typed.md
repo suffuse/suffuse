@@ -31,6 +31,16 @@
 
 --
 
+## Type Inference
+- The [file command](http://en.wikipedia.org/wiki/File_(command)) is "type inference"
+- attach type metadata when the conformance test validates type inference
+- log warnings when conformance test contradicts type inference
+- The "expected type" of an unknown file might be hinted by extension
+- Infer all file types on an ongoing basis, and log type events
+- Inferred file types can be marked as advisory when desired
+
+--
+
 ## Recover (files not in git)
 - Why is it easy to permanently destroy data?
 - Every sane application maintains an undo stack
